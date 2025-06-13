@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Am Kelavi | מבצע "עם כלביא" - מידע עדכונים וחדשות בזמן אמת</title>
+    <title>Am Kelavi | מבצע "עם כלביא" - חדשות, עדכונים ומבזקים בזמן אמת</title>
     <meta name="description"
-        content='אתר "עם כלביא" מספק מידע, עדכונים וחדשות בזמן אמת על מבצע "עם כלביא" של ישראל נגד איראן.'>
-    <meta name="keywords" content="עם כלביא, מבצע עם כלביא, חדשות, עדכונים, ישראל, איראן, מבצע צבאי, חדשות בזמן אמת">
+        content='אתר "עם כלביא" מספק חדשות, עדכונים ומבזקים בזמן אמת על מבצע "עם כלביא" של ישראל נגד איראן.'>
+    <meta name="keywords" content="עם כלביא, מבצע עם כלביא, חדשות, עדכונים, מבזקים, ישראל, איראן, מבצע צבאי, חדשות בזמן אמת">
     <meta name="author" content="Gurel Ben Shabat">
-    <meta property="og:title" content='Am Kelavi | מבצע "עם כלביא" - מידע עדכונים וחדשות בזמן אמת'>
+    <meta property="og:title" content='Am Kelavi | מבצע "עם כלביא" - חדשות, עדכונים ומבזקים בזמן אמת'>
     <meta property="og:description"
-        content='אתר "עם כלביא" מספק מידע, עדכונים וחדשות בזמן אמת על מבצע "עם כלביא" של ישראל נגד איראן.'>
+        content='אתר "עם כלביא" מספק חדשות, עדכונים ומבזקים בזמן אמת על מבצע "עם כלביא" של ישראל נגד איראן.'>
     <meta property="og:type" content="website">
     <meta property="og:locale" content="he_IL">
     <meta property="og:url" content="https://amkelavi.org/">
@@ -19,30 +19,115 @@
     <meta property="og:image" content="https://www.amkelavi.org/images/og-image.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:image" content="https://www.amkelavi.org/images/og-image.png">
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
-
-        <!-- Google Tag Manager -->
-        <script>(function (w, d, s, l, i) {
-                w[l] = w[l] || []; w[l].push({
-                    'gtm.start':
-                        new Date().getTime(), event: 'gtm.js'
-                }); var f = d.getElementsByTagName(s)[0],
-                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-            })(window, document, 'script', 'dataLayer', 'GTM-P95N4J9V');</script>
-        <!-- End Google Tag Manager -->
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="icon" type="image/png"  href="/images/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/images/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/images/android-chrome-512x512.png">
-
-   
-    
     <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shadcn/ui@latest/dist/shadcn-ui.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Custom overrides for RTL and Hebrew */
+        body {
+            direction: rtl;
+            background: var(--background);
+            color: var(--foreground);
+        }
 
+        .shadcn-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 24px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-lg);
+        }
 
+        .shadcn-header {
+            background: var(--primary);
+            color: var(--primary-foreground);
+            padding: 32px 0 16px 0;
+            border-radius: var(--radius) var(--radius) 0 0;
+            text-align: center;
+        }
+
+        .shadcn-nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .shadcn-nav a {
+            font-weight: 500;
+            color: var(--primary);
+            background: var(--muted);
+            border-radius: var(--radius);
+            padding: 8px 18px;
+            transition: background 0.2s;
+        }
+
+        .shadcn-nav a:hover {
+            background: var(--accent);
+            color: var(--accent-foreground);
+        }
+
+        .shadcn-section {
+            margin: 32px 0;
+        }
+
+        .shadcn-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .shadcn-footer {
+            background: var(--muted);
+            color: var(--muted-foreground);
+            text-align: center;
+            padding: 18px 0 8px 0;
+            border-radius: 0 0 var(--radius) var(--radius);
+            margin-top: 40px;
+            font-size: 0.95em;
+        }
+
+        .live-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #e11d48;
+            border-radius: 50%;
+            margin-left: 8px;
+            animation: live-blink 1s infinite alternate;
+            vertical-align: middle;
+        }
+
+        @keyframes live-blink {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.3;
+            }
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-P95N4J9V');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -50,39 +135,117 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P95N4J9V" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <h1>ברוכים הבאים לעם כלביא</h1>
-        <nav>
-            <ul>
-                <li><a href="#updates">עדכונים</a> - בקרוב</li>
-                <li><a href="#news">חדשות בזמן אמת</a> - בקרוב</li>
-                <li><a href="https://www.gurel.info/#contact">צור קשר</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>אודות עם כלביא</h2>
-            <p>
-                "עם כלביא" הוא אתר המרכז עדכונים וחדשות בזמן אמת על מבצע "עם כלביא" של ישראל נגד איראן. האתר מספק מידע,
-                חדשות ועדכונים שוטפים.
+    <div class="shadcn-container">
+        <header class="shadcn-header">
+            <h1>עם כלביא</h1>
+            <p style="font-size:1.2em; margin-top:8px;">
+                חדשות, עדכונים ומבזקים בזמן אמת על מבצע "עם כלביא"
+                <span class="live-dot" title="LIVE"></span>
             </p>
-        </section>
-        <section>
-            <h2>עדכונים אחרונים</h2>
-            <p>
-                הישארו מעודכנים עם החדשות והעדכונים האחרונים על המבצע והשלכותיו.
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>
+            <nav class="shadcn-nav">
+                <a href="#news">חדשות</a>
+                <a href="#updates">עדכונים</a>
+                <a href="#alerts">מבזקים</a>
+                <a href="#about">אודות</a>
+                <a href="#contact">צור קשר</a>
+            </nav>
+        </header>
+        <main>
+            <section id="news" class="shadcn-section">
+                <h2>חדשות בזמן אמת</h2>
+                <div id="news-list">
+                    <!-- News articles will be injected here by MCP client -->
+                    <div class="shadcn-card">
+                        <h3>כותרת חדשות לדוגמה</h3>
+                        <p>תקציר של ידיעה חדשותית לדוגמה. כאן יופיעו חדשות בזמן אמת שיתעדכנו אוטומטית מהשרת.</p>
+                        <span style="font-size:0.9em; color:var(--muted-foreground);">לפני 2 דקות</span>
+                    </div>
+                </div>
+            </section>
+            <section id="updates" class="shadcn-section">
+                <h2>עדכונים אחרונים</h2>
+                <div id="updates-list">
+                    <!-- Updates will be injected here by MCP client -->
+                    <div class="shadcn-card">
+                        <h3>עדכון לדוגמה</h3>
+                        <p>פירוט של עדכון אחרון בנוגע למבצע. כאן יופיעו עדכונים שוטפים מהשרת.</p>
+                        <span style="font-size:0.9em; color:var(--muted-foreground);">לפני 5 דקות</span>
+                    </div>
+                </div>
+            </section>
+            <section id="alerts" class="shadcn-section">
+                <h2>מבזקים</h2>
+                <div id="alerts-list">
+                    <!-- Alerts will be injected here by MCP client -->
+                    <div class="shadcn-card" style="border-right: 4px solid #e11d48;">
+                        <h3>מבזק לדוגמה</h3>
+                        <p>מבזק קצר ועדכני מהשטח. כאן יופיעו מבזקים בזמן אמת.</p>
+                        <span style="font-size:0.9em; color:var(--muted-foreground);">לפני דקה</span>
+                    </div>
+                </div>
+            </section>
+            <section id="about" class="shadcn-section">
+                <h2>אודות עם כלביא</h2>
+                <div class="shadcn-card">
+                    <p>
+                        "עם כלביא" הוא אתר המרכז חדשות, עדכונים ומבזקים בזמן אמת על מבצע "עם כלביא" של ישראל נגד איראן. האתר מתעדכן אוטומטית בעזרת scraper ושרת MCP, ומספק מידע אמין, מהיר ועדכני.
+                    </p>
+                </div>
+            </section>
+            <section id="contact" class="shadcn-section">
+                <h2>צור קשר</h2>
+                <div class="shadcn-card">
+                    <form action="#" method="post" style="display:flex; flex-direction:column; gap:12px;">
+                        <label for="name">שם:</label>
+                        <input type="text" id="name" name="name" required class="shadcn-input">
+                        <label for="email">אימייל:</label>
+                        <input type="email" id="email" name="email" required class="shadcn-input">
+                        <label for="message">הודעה:</label>
+                        <textarea id="message" name="message" required class="shadcn-input"></textarea>
+                        <button type="submit" class="shadcn-btn shadcn-btn-primary">שלח הודעה</button>
+                    </form>
+                    <div style="margin-top:16px;">
+                        <p>אימייל: <a href="mailto:info@amkelavi.org">info@amkelavi.org</a></p>
+                        <p>טלפון: +1 (555) 123-4567</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="shadcn-footer">
             &copy; 2025 עם כלביא. כל הזכויות שמורות.<br>
             פותח ב-<span style="color:red;">&#10084;&#65039;</span> ע"י
-            <a href="https://www.gurel.info/#contact" target="_blank">Gurel Ben Shabat</a>
-        </p>
-    </footer>
-    <!-- <script src="js/main.js"></script> -->
+            <a href="https://www.gurel.info/#contact" target="_blank" style="color:var(--primary);">Gurel Ben Shabat</a>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <!-- Example MCP client placeholder (replace with real implementation) -->
+    <script>
+        // Example: Simulate real-time updates from MCP server
+        // Replace with actual MCP client logic
+        setTimeout(() => {
+            document.getElementById('news-list').innerHTML = `
+                <div class="shadcn-card">
+                    <h3>תקיפה אווירית בדרום איראן</h3>
+                    <p>דיווחים ראשוניים: חיל האוויר הישראלי תקף מטרות אסטרטגיות בדרום איראן. פרטים נוספים בהמשך.</p>
+                    <span style="font-size:0.9em; color:var(--muted-foreground);">לפני דקה</span>
+                </div>
+            `;
+            document.getElementById('updates-list').innerHTML = `
+                <div class="shadcn-card">
+                    <h3>עדכון: כוחות קרקעיים נערכים</h3>
+                    <p>צה"ל מגביר את ההיערכות בגבול הצפוני. הציבור מתבקש להישאר מעודכן.</p>
+                    <span style="font-size:0.9em; color:var(--muted-foreground);">לפני 2 דקות</span>
+                </div>
+            `;
+            document.getElementById('alerts-list').innerHTML = `
+                <div class="shadcn-card" style="border-right: 4px solid #e11d48;">
+                    <h3>מבזק: אזעקות בדרום</h3>
+                    <p>אזעקות נשמעו במספר יישובים בדרום הארץ. יש להישמע להנחיות פיקוד העורף.</p>
+                    <span style="font-size:0.9em; color:var(--muted-foreground);">לפני שניות אחדות</span>
+                </div>
+            `;
+        }, 2000);
+    </script>
 </body>
 
 </html>
